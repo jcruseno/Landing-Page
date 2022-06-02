@@ -1,0 +1,756 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+
+:root {
+    --dancing-font: 'Dancing Script', cursive;
+    --lobster-font: 'Lobster', cursive;
+    --shadows-font: 'Shadows Into Light', cursive;
+    --permanent--font: 'Permanent Marker', cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(180deg, rgb(247, 28, 28), rgb(241, 158, 158));
+  background-repeat: no-repeat;
+}
+
+/* 
+mobile devices: 320px - 480px
+iPads / Tablets: 481px - 768px
+Small Screen, Laptops: 769px - 1024px
+Desktop / Large Screen: 1025px - 1200px
+Extra Large Screen: 1201 o más
+*/
+
+.img-menu-hamb {
+  width: 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  outline: 1px solid salmon;
+  align-items: center;
+  background-color: #fff;
+}
+
+.nav__img__logo {
+  min-width: 55px;
+  max-width: 180px;
+  cursor: pointer;
+}
+
+.menu-ppal li a{
+  text-decoration: none;
+}
+
+.menu-ppal li {
+  list-style: none;
+  padding: 2rem 0;
+  background-color: rgb(206, 226, 226);
+}
+
+.menu-ppal, .menu-hamb {
+  display: none;
+}
+
+.menu-hamb:checked + .menu-ppal {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 6.8rem;
+  font-family: var(--dancing-font);
+  width: 100vw;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.menu-ppal li:hover {
+    background-color: rgb(233, 124, 110);
+    transition: 0.8s;
+}
+
+/* Configuración whatsapp */
+
+.img-wapp {
+  width: 45px;
+  border-radius: 50%;
+}
+
+.btn-wapp {
+  position: sticky;
+  top: 7rem;
+}
+
+/* configuración SECTION estaciones */
+
+.header__estaciones ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  background-color: rgb(228, 185, 137);
+  padding: 10px 0;
+  font-family: var(--lobster-font);
+}
+
+.header__estaciones ul a{
+ text-decoration: none;
+ color: black;
+}
+
+.header__estaciones ul li:hover {
+  background-color: white;
+  padding: 0 10px;
+  border-radius: 20px;
+}
+
+
+/* Configuración fotos modelo */
+
+.foto-modelo {
+  width: 100%;
+}
+
+.container__mobile {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  animation-name: slider;
+  left: 0;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
+/* CONFIGURACIÓN NEWSLETTER */
+
+.video, .gift-card {
+  display: none;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 2rem;
+  padding: 1.5rem 0;
+  border-radius: 10px;
+  background-color: rgb(247, 215, 220);
+  outline: 1px solid black;
+  line-height: 2.5rem;
+}
+
+.newsletter__correo {
+  width: 70%;
+  text-align: center;
+}
+
+.newsletter__btn-enviar {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-transform: uppercase;
+  border: none;
+  background-color: aquamarine;
+  outline: 1px solid red;
+  font-family: var(--shadows-font);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.newsletter__btn-enviar:active {
+  background-color: rgb(122, 197, 240);
+}
+
+.newsletter__label {
+  font-family: var(--shadows-font);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+
+
+/* ACCESOS RAPIDOS CONFIGURACION */
+
+.despegar, .meli {
+  display: none;
+}
+
+.accesos__rapidos {
+  margin-top: 2rem;
+  margin: 2rem 1rem 0;
+  display: grid;
+  grid-template-columns: 4;
+  grid-template-rows: 1;
+  gap: 1rem;
+  font-family: var(--dancing-font);
+  font-size: 3rem;
+  padding: 1rem 0;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.accesos__rapidos a{
+  text-decoration: none;
+  color: white;
+}
+
+/*DESTACADOS - Config*/
+
+.destacados-tit {
+  background-color: rgb(83, 252, 5);
+  margin: 2rem 1.5rem 0.8rem;
+  text-align: center;
+  font-family: var(--permanent--font);
+  font-size: 3rem;
+  border-radius: 20px;
+}
+
+.destacados__img {
+  min-width: 8rem;
+  max-width: 20rem;
+  height: 20rem;
+  border-radius: 20px;
+}
+
+.destacados {
+  outline: 1px solid crimson;
+  margin: 1.5rem;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: aliceblue;
+}
+
+.destacados__cont__slider {
+  display: grid;
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem;
+  animation: destacados 15s infinite alternate;
+  position: relative;
+  left: 0;
+}
+
+@keyframes destacados {
+  0% {
+    left: 0;
+  }
+  10% {
+    left: -10vw;
+  }
+  20% {
+    left: -20vw;
+  }
+  30% {
+    left: -30vw;
+  }
+  40% {
+    left: -40vw;
+  }
+  50% {
+    left: -50vw;
+  }
+  60% {
+    left: -60vw;
+  }
+  70% {
+    left: -70vw;
+  }
+  80% {
+    left: -80vw;
+  }
+  90% {
+    left: -90vw;
+  }
+  100% {
+    left: -100vw;
+  }
+}
+
+/* FACILIDADES - config */
+
+.facilidades {
+  background-color: aqua;
+  margin: 1.5rem 2rem 0;
+  padding: 0.5rem;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 10px;
+  font-style: oblique;
+}
+
+/* TARJETAS + ENVIOS - CONFIG */
+
+.img-tarjetas-envios {
+  min-width: 5rem;
+  max-width: 10rem;
+}
+
+.container__tarjetas-envios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid black;
+  margin: 2rem 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+/* HORARIOS ATENCION - Config */
+
+.horario-atencion {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: repeat(1fr,18);
+  margin-top: 1.5rem;
+  margin: 1.5rem 1rem;
+}
+
+.horario__atencion__titulo {
+  grid-area: 1 / 1 / 1 /4;
+  background-color: blue;
+  font-family: var(--dancing-font);
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.horario__atencion__subtit {
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: italic;
+  outline: 1px solid black;
+  background-color: lightslategray;
+}
+
+.horario__atencion__hora {
+  padding: 0.3rem 0;
+  outline: 1px solid black;
+}
+
+.horario__atencion__lunes {
+  grid-area: 3 / 1 / 5 /2;
+  background-color: rgb(155, 240, 240);
+  text-align: center;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid black;
+}
+
+.horario__atencion__hora {
+  text-align: center;
+}
+
+.horario__atencion__martes {
+  grid-area: 5 / 1 / 7 /2;
+  background-color: rgb(181, 233, 176);
+  text-align: center;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid black;
+}
+
+.horario__atencion__miercoles {
+  grid-area: 7 / 1 / 9 /2;
+  background-color: rgb(155, 240, 240);
+  text-align: center;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid black;
+}
+
+.horario__atencion__jueves {
+  grid-area: 9 / 1 / 11 /2;
+  background-color: rgb(181, 233, 176);
+  text-align: center;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid black;
+}
+
+.horario__atencion__viernes {
+  grid-area: 11 / 1 / 13 /2;
+  background-color: rgb(155, 240, 240);
+  text-align: center;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid black;
+}
+
+.horario__atencion__sabado {
+  grid-area: 13 / 1 / 15 /2;
+  background-color: rgb(181, 233, 176);
+  text-align: center;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid black;
+}
+
+.horario__atencion__domingo {
+  grid-area: 15 / 1 / 17 /2;
+  background-color: rgb(155, 240, 240);
+  text-align: center;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid black;
+}
+
+.frente-local {
+  display: none;
+}
+
+.seguinos {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  animation: seguinos 1.5s infinite;
+  padding: 0.5rem 1rem;
+  margin: 5rem 0.5rem 2rem;
+  border-radius: 10px;
+  font-style: oblique;
+}
+
+@keyframes seguinos {
+  0% {
+    background-color: lightgreen;
+  }
+  50% {
+    background-color: lightyellow;
+  }
+  100% {
+    background-color: lightgreen;
+  }
+}
+
+.seguinos::after {
+  content: "👇👇👇";
+}
+
+/* FOOTER - Config */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  outline: 1px groove;
+}
+
+.footer__derechos {
+  width: 13rem; 
+}
+
+.footer__links ul {
+  display: flex;
+}
+
+.footer__links ul li {
+  list-style: none;
+  margin: 0 0.5rem;
+}
+
+.footer__img {
+  width: 25px;
+}
+
+/* TABLET - Config */
+
+@media (min-width:481px) {
+
+  .menu-ppal {
+    display: block;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+  }
+
+  .menu-ppal li {
+    padding: 0.5rem;
+    margin: 0 0.2rem;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    background-color: white;
+    font-style: italic;
+    outline: 1px solid rgb(179, 174, 174);
+  }
+
+  .img-menu-hamb, .menu-hamb {
+    display: none;
+  }
+
+  .header__estaciones {
+    font-size: 1.5rem;
+  }
+
+  .foto-modelo {
+    width: 50vw;
+  }
+
+  @keyframes slider {
+    0% {
+      left: 0;
+    }
+    20% {
+      left: 0;
+    }
+    25% {
+      left: -50vw;
+    }
+    45% {
+      left: -50vw;
+    }
+    50% {
+      left: -100vw;
+    }
+    70% {
+      left: -100vw;
+    }
+    75% {
+      left: -150vw;
+    }
+    95% {
+      left: -150vw;
+    }
+    100% {
+      left: 0vw;
+    }
+  }
+  
+  .newsletter__correo, .date {
+    font-size: 1.3rem;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .newsletter__correo:focus {
+    background-color: rgb(162, 223, 162);
+    color: red;
+  }
+
+  .newsletter__label {
+    margin-top: 1.5rem;
+  }
+
+  .depegar, .meli, .frente-local {
+    display: none;
+  }
+}
+
+.accrap a:hover {
+  background-color: red;
+  border-radius: 10px;
+  padding: 0 2rem;
+  transition: 0.6s;
+}
+
+/* LAPTOPS / SMALL SCREEN - Config */
+
+@media (min-width:769px) {
+
+  .menu-ppal {
+    display: block;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+  }
+
+  .img-menu-hamb, .menu-hamb {
+    display: none;
+  }
+
+  @keyframes slider {
+    0% {
+      left: 0;
+    }
+    50% {
+      left: 0;
+    }
+    60% {
+      left: -100%;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+
+}
+
+.accesos__rapidos:hover {
+  background-color: lightcoral;
+  transition: 0.8s;
+}
+
+
+/* LARGE SCREEN - +1025PX */
+
+@media (min-width:1025px) {
+
+  .foto-modelo {
+    width: 25%;
+  }
+  .foto-modelo1 {display: none;}
+
+  .container__mobile {
+    animation: none;
+    width: 100vw;
+  }
+
+  .video, .gift-card, .frente-local {
+    display: block;
+  }
+
+  .container__fullscreen {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem 2rem 1rem 0;
+    margin: 3rem 1rem;
+    border-radius: 10px;
+    outline: 1px solid;
+    flex-wrap: wrap;
+  }
+
+  .container__fullscreen:hover {
+    background-color: lightcoral;
+    transition: 0.8s;
+  }
+
+  
+  .container__fullscreen2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    margin: 0rem 1rem;
+    border-radius: 10px;
+    outline: 1px solid;
+  }
+
+  .meli, .despegar {
+    display: block;
+  }
+
+  .img-despegar {
+    width: 25rem;
+    border-radius: 10px;
+  }
+
+  .img-meli {
+    height: 8rem;
+    border-radius: 10px;
+  }
+
+  .accesos__rapidos {
+    width: 45rem;
+    margin: 0;
+  }
+
+  .newsletter {
+    width: 30rem;
+    height: 20rem;
+  }
+
+  .gift-card-img {
+    width: 35rem;
+    height: 25rem;
+    border-radius: 10px;
+  }
+
+  .video {
+    height: 25rem;
+    border-radius: 10px;
+  }
+
+  .container__tarjetas-envios {
+    width: max-content;
+    padding: 2rem;
+    margin: 2rem auto;
+  }
+  .img-tarjetas-envios {
+    border-radius: 20px;
+    padding: 1rem;
+    width: 40rem;
+  }
+
+  .horario-atencion {
+    width: 40%;
+    font-size: 1.2rem;
+  }
+
+  .containar__fullscreen__horario__frente__local {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    outline: 1px solid;
+    margin: 0 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    flex-wrap: wrap;
+  }
+
+  .img-frente-local {
+    max-width: 45rem;
+    border-radius: 10px;
+  }
+}
+

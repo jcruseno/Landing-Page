@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+:root {
+    --dancing-font: 'Dancing Script', cursive;
+    --lobster-font: 'Lobster', cursive;
+    --shadows-font: 'Shadows Into Light', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(180deg, rgb(247, 28, 28), rgb(241, 158, 158));
+  background-repeat: no-repeat;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    outline: 1px solid salmon;
+    align-items: center;
+    background-color: #fff;
+}
+  
+.nav__img__logo {
+    min-width: 55px;
+    max-width: 180px;
+}
+
+.volver {
+      width: 55px;
+  }
+
+/* configuración SECTION estaciones */
+
+.header__estaciones ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    background-color: rgb(228, 185, 137);
+    padding: 10px 0;
+    font-family: var(--lobster-font);
+}
+  
+  .header__estaciones ul a{
+   text-decoration: none;
+   color: black;
+  }
+  
+  .header__estaciones ul li:hover {
+    background-color: white;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
+p {
+    font-family: var(--dancing-font);
+    font-size: 4rem;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    text-shadow: 20px 10px 10px black ;
+}
+
+.container__label {
+    display: block;
+    font-family: var(--dancing-font);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.container__input {
+    width: 20rem;
+    display: block;
+    margin: 0.5rem auto;
+    align-self: center;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    display: block;
+    margin: 3rem auto;
+    font-family: var(--shadows-font);
+    font-size: 1.5rem;
+    text-align: center;
+    border:none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:active {
+    background-color: lightblue;
+    outline: 2px solid black;
+}
+
+.container__olvidar {
+    display: block;
+    font-family: var(--dancing-font);
+    font-size: 1.5rem;
+    background-color: beige;
+    width: 15rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px black;
+    border: none;
+    cursor: pointer;
+}
+
+.container__registro {
+    display: block;
+    font-family: var(--dancing-font);
+    font-size: 1.5rem;
+    width: 15rem;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px black;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.seguinos {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  animation: seguinos 1.5s infinite;
+  padding: 0.5rem 1rem;
+  margin: 5rem 0.5rem 2rem;
+  border-radius: 10px;
+  font-style: oblique;
+}
+
+@keyframes seguinos {
+  0% {
+    background-color: lightgreen;
+  }
+  50% {
+    background-color: lightyellow;
+  }
+  100% {
+    background-color: lightgreen;
+  }
+}
+
+.seguinos::after {
+  content: "👇👇👇";
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    outline: 1px groove;
+}
+  
+.footer__derechos {
+    width: 13rem; 
+}
+  
+.footer__links ul {
+    display: flex;
+}
+  
+.footer__links ul li {
+    list-style: none;
+    margin: 0 0.5rem;
+}
+  
+.footer__img {
+    width: 25px;
+}
